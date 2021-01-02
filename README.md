@@ -48,7 +48,7 @@ $$
 
 ${M + 2^{23} * E}$ is bit representation of a number, in some sense the bit representation of a number is its own logarithm
 
-#### Step 2 
+### Step 2 
 
 > ##### Remider
 > 
@@ -75,6 +75,7 @@ ${M + 2^{23} * E}$ is bit representation of a number, in some sense the bit repr
  ------------
  
  In some sense, it is stored in $i$ the logarithm of $y$ up to some scaling and shifting. Then the problem becomes easier work with the log of y.
+ 
  $$
  \begin{align*}
  y &= \frac{1}{\sqrt{x}}\\
@@ -83,7 +84,8 @@ ${M + 2^{23} * E}$ is bit representation of a number, in some sense the bit repr
  & = -\frac{1}{2} * \log_2(y)\\
  \end{align*}
  $$
- The code ```np.int32(i >> 1)``` represents this division by 2 of the log of Y, sinse the $i$ represents the logarithm of Y, itself
+ 
+The code ```np.int32(i >> 1)``` represents this division by 2 of the log of Y, sinse the $i$ represents the logarithm of Y, itself
  
  ------
  ------
